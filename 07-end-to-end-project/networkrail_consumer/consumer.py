@@ -15,12 +15,13 @@ upstash_bootstrap_servers = parser.get("config", "upstash_bootstrap_servers")
 upstash_username = parser.get("config", "upstash_username")
 upstash_password = parser.get("config", "upstash_password")
 
-GCP_PROJECT_ID = "YOUR_GCP_PROJECT_ID"
-BUCKET_NAME = "YOUR_BUCKET_NAME"
+GCP_PROJECT_ID = "my-project-de-434208"
+BUCKET_NAME = "deb4-bootcamp-19"
 BUSINESS_DOMAIN = "networkrail"
 DESTINATION_FOLDER = f"{BUSINESS_DOMAIN}/raw"
-KEYFILE_PATH = "YOUR_KEYFILE_PATH"
-CONSUMER_GROUP = "YOUR_CONSUMER_GROUP"
+KEYFILE_PATH = "/workspaces/data-engineering-bootcamp/00-bootcamp-project/deb4-upload-file-to-gcs.json"
+#CONSUMER_GROUP not dup
+CONSUMER_GROUP = "deb4-bootcamp-19"
 
 consumer = KafkaConsumer(
     "networkrail-train-movements",
